@@ -1,0 +1,22 @@
+{
+    "name": "ocornejo/conekta-laravel",
+    "description": "Paquete para usar paquete de conekta en Laravel.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Octavio Cornejo",
+            "email": "ocornejot@gmail.com"
+        }
+    ],
+    "minimum-stability": "alpha",
+    "require": {
+        "php": "~7.0",
+        "conekta/conekta-php": "4.0.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ocornejo\\Conekta": "src/"
+        }
+    }
+}
