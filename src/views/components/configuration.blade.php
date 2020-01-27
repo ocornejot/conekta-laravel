@@ -15,12 +15,22 @@
             <div class="col-md-12 col-sm-12">
                 <div class="form-group">
                     {{ Form::label('private_key', 'Llave privada:', ['class' => 'control-label']) }}
-                    {{ Form::text('private_key', null, ['class' => 'form-control', 'maxlength' => '100']) }}
+                    {{ Form::text('private_key', null, ['class' => 'form-control ' . ($errors->has('private_key') ? 'is-invalid' : ''), 'maxlength' => '100', 'required']) }}
                 </div>
+                @if ($errors->has('private_key'))
+                    <div class="text-danger">
+                        <small>{{ $errors->first('private_key') }}</small>
+                    </div>
+                @endif
                 <div class="form-group">
                     {{ Form::label('public_key', 'Llave pública:', ['class' => 'control-label']) }}
-                    {{ Form::text('public_key', null, ['class' => 'form-control', 'maxlength' => '100']) }}
+                    {{ Form::text('public_key', null, ['class' => 'form-control ' . ($errors->has('public_key') ? 'is-invalid' : ''), 'maxlength' => '100', 'required']) }}
                 </div>
+                @if ($errors->has('public_key'))
+                    <div class="text-danger">
+                        <small>{{ $errors->first('public_key') }}</small>
+                    </div>
+                @endif
             </div>
 
             <div style="text-align: center;">

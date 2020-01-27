@@ -4,8 +4,9 @@ namespace Ocornejo\Conekta\Http\Controllers;
 
 use Conekta\Conekta;
 use Illuminate\Http\Request;
-use App\Conekta as ConektaModel;
+use Ocornejo\Conekta\Models\Conekta as ConektaModel;
 use App\Http\Controllers\Controller;
+use Ocornejo\Conekta\Http\Request\ConektaRequest;
 
 class ConektaController extends Controller
 {
@@ -33,10 +34,10 @@ class ConektaController extends Controller
     }
 
     /**
-     * @param Request $request
+     * @param ConektaRequest $request
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
-    public function update(Request $request)
+    public function update(ConektaRequest $request)
     {
         $this->conekta->update($request->all());
         return redirect('/conekta/configuration');
