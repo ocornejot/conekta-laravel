@@ -21,7 +21,6 @@ class CreatePaymentsTable extends Migration
             $table->text('metadata')->nullable();
             $table->dateTime('approved_at')->nullable();
             $table->timestamps();
-            $table->timestamps();
         });
     }
 

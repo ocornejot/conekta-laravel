@@ -1,6 +1,6 @@
 <?php
 
-namespace Ocornejo\Conekta\Models;
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 

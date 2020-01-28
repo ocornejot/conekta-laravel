@@ -1,6 +1,6 @@
 <?php
 
-namespace Ocornejo\Conekta\Http\Request;
+namespace App\Http\Request;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -13,7 +13,7 @@ class ConektaRequest extends FormRequest
      */
     public function authorize()
     {
-        return auth()->check();
+        return true;
     }
 
     /**

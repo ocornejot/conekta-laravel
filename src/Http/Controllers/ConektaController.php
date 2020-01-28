@@ -1,12 +1,11 @@
 <?php
 
-namespace Ocornejo\Conekta\Http\Controllers;
+namespace App\Http\Controllers;
 
 use Conekta\Conekta;
 use Illuminate\Http\Request;
-use Ocornejo\Conekta\Models\Conekta as ConektaModel;
-use App\Http\Controllers\Controller;
-use Ocornejo\Conekta\Http\Request\ConektaRequest;
+use App\Conekta as ConektaModel;
+use App\Http\Request\ConektaRequest;
 
 class ConektaController extends Controller
 {
