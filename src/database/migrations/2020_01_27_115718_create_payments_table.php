@@ -19,6 +19,7 @@ class CreatePaymentsTable extends Migration
             $table->string('conekta_id', 100)->index();
             $table->string('type', 50);
             $table->text('metadata')->nullable();
+            $table->string('status', 30)->nullable();
             $table->dateTime('approved_at')->nullable();
             $table->timestamps();
         });

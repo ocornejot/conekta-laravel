@@ -11,6 +11,7 @@ class Payment extends Model
         'conekta_id',
         'type',
         'metadata',
+        'status',
         'approved_at',
     ];
 
