@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Payment;
 use Conekta\Order;
 use Conekta\Conekta;
+use App\Mail\OrderPaidMail;
 use Illuminate\Http\Request;
 use App\Mail\OxxoReferenceMail;
 use App\Conekta as ConektaModel;
@@ -65,7 +66,7 @@ class ConektaController extends Controller
                 $payment->status = $request->data['object']['payment_status'];
                 $payment->save();
 
-
+                Mail::to($request->data['object']['customer_info']['email'])->send(new OrderPaidMail($request->data));
                 break;
             case 'charge.paid':
                 //TODO
