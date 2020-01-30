@@ -173,10 +173,8 @@
         });
 
         var submitForm = function (event) {
-
-
-            // console.log('submitForm');
-            // return;
+            if ($('#rd-oxxo').is(':checked'))
+                return true;
 
             var $form = $(this);
             var tokenData = {
