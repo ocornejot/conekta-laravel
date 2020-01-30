@@ -32,7 +32,7 @@ si tu versión de Laravel es inferior a 5.4 es necesario registrar el _provider_
 ]
 ```
 
-###### Configuración
+## Configuración
 Es necesario ejecutar el siguiente comando:
 
 ```
@@ -46,6 +46,11 @@ Route::post('conekta/webhook', 'ConektaController@webhook');
 ```
 Ahora registra la siguiente ruta en [Conekta](https://admin.conekta.com/settings/webhooks) en la configuración de webhooks `<tu-ruta>/api/conekta/webhook`
 
+
+## Pruebas
+
+Puedes acceder a la siguiente ruta para hacer pruebas del formulario de pagos oxxo/tarjetas
+`<tu-ruta>/conekta/payment-example`
 
 ## Licencia
 
