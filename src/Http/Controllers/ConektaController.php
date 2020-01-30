@@ -60,7 +60,12 @@ class ConektaController extends Controller
     {
         switch ($request->type) {
             case 'order.paid':
-                //TODO
+                $payment = Payment::where('conekta_id', $request->data['object']['id'])->firstOrFail();
+                $payment->approved_at = now();
+                $payment->status = $request->data['object']['payment_status'];
+                $payment->save();
+
+
                 break;
             case 'charge.paid':
                 //TODO
@@ -74,6 +79,7 @@ class ConektaController extends Controller
         }
 
         logger('WEBHOOK LOG', [
+            'type' => $request->type,
             'data' => print_r($request->data, true)
         ]);
 
