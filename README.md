@@ -8,12 +8,12 @@
 
 Este paquete está diseñado para usarse en Laravel 5.*
 
-##Requerimientos
+## Requerimientos
 
 * PHP >= 5.4
 * Laravel 5.*
 
-##Instalación
+## Instalación
 
 Para instalar el paquete con **composer**:
 
