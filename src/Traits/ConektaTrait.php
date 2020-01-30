@@ -12,15 +12,14 @@ trait ConektaTrait
      */
     public static function formatData(array $data = [])
     {
+        $items = self::setItemsUnitPriceAmountFormat($data['items']);
         return array(
-            'line_items'=> array(
-                $data['items']
-            ),
+            'line_items'=> $items,
             'currency'    => 'mxn',
             'charges'     => array(
                 array(
                     'payment_method' => self::getPaymentFormat($data),
-                    'amount' => (int) self::getAmountFormat($data['amount'])
+                    'amount' => (int) self::getTotalAmount($items)
                 )
             ),
             'currency'      => 'mxn',
@@ -66,6 +65,34 @@ trait ConektaTrait
      */
     protected static function getAmountFormat($amount)
     {
-        return str_replace(['$', ',', '.'], '', $amount);
+        if (strpos($amount, '.'))
+            return (int) str_replace(['$', ',', '.'], '', $amount);
+        else
+            return (int) str_replace(['$', ','], '', ($amount . '00'));
+    }
+
+    /**
+     * @param $items
+     * @return mixed
+     */
+    protected static function setItemsUnitPriceAmountFormat($items)
+    {
+        foreach ($items as $i => $item) {
+            $items[$i]['unit_price'] = self::getAmountFormat($item['unit_price']);
+        }
+        return $items;
+    }
+
+    /**
+     * @param $items
+     * @return int|mixed
+     */
+    protected static function getTotalAmount($items)
+    {
+        $total = 0;
+        foreach ($items as $item) {
+            $total += $item['unit_price'];
+        }
+        return $total;
     }
 }
