@@ -144,7 +144,7 @@
                 </div>
                 <div class="col-sm-6 col-md-3">
                     <div class="form-group">
-                        {!! Form::select('year', ['2020' => '2020'], [], ['class'=>'form-control', 'placeholder' => 'Año']) !!}
+                        {!! Form::text('year', null, ['class'=>'form-control', 'placeholder' => 'Año']) !!}
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-3">
