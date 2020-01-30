@@ -1,5 +1,7 @@
 # Paquete Conekta-Laravel
 
+_No aseguro darle mantenimiento a este paquete, usalo bajo tu propia resposabilidad._
+
 [![issues](https://img.shields.io/github/issues/ocornejot/conekta-laravel)](https://github.com)
 [![forks](https://img.shields.io/github/forks/ocornejot/conekta-laravel)](https://github.com)
 [![stars](https://img.shields.io/github/stars/ocornejot/conekta-laravel)](https://github.com)
