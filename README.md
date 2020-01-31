@@ -1,6 +1,6 @@
 # Paquete Conekta-Laravel
 
-_No aseguro darle mantenimiento a este paquete, usalo bajo tu propia resposabilidad._
+_No aseguro darle mantenimiento a este paquete, úsalo bajo tu propia resposabilidad._
 
 [![issues](https://img.shields.io/github/issues/ocornejot/conekta-laravel)](https://github.com)
 [![forks](https://img.shields.io/github/forks/ocornejot/conekta-laravel)](https://github.com)
@@ -9,6 +9,14 @@ _No aseguro darle mantenimiento a este paquete, usalo bajo tu propia resposabili
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://packagist.org/packages/ocornejo/conekta-laravel)
 
 Este paquete está diseñado para usarse en Laravel 5.*
+
+##### Contenido:
+* Funcionalidad de webhook.
+* Formulario (componente reutilizable) para configurar las llaves pública y privada de conekta.
+* Formulario (componente reutilizable) de pagos oxxo/tarjeta.
+* Funcionalidad activa para guardar los pagos pendientes y realizados.
+* Correo electrónico de referencia para pago en tienda oxxo.
+* Correo electrónico de pago recibido (oxxo/tarjeta).
 
 ## Requerimientos
 
